@@ -10,8 +10,10 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
+        "laravel/breeze": "^2.3",
         "laravel/framework": "^12.0",
-        "laravel/tinker": "^2.10.1"
+        "laravel/tinker": "^2.10.1",
+        "realrashid/sweet-alert": "*"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
@@ -20,7 +22,8 @@
         "laravel/sail": "^1.41",
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^8.6",
-        "phpunit/phpunit": "^11.5.3"
+        "pestphp/pest": "^3.8",
+        "pestphp/pest-plugin-laravel": "^3.2"
     },
     "autoload": {
         "psr-4": {
@@ -73,6 +76,10 @@
             "php-http/discovery": true
         }
     },
+    "repositories": {
+        "packagist":{"url": "https://packagist.org","type": "composer"}
+    },
+
     "minimum-stability": "stable",
     "prefer-stable": true
 }
