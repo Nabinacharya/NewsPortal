@@ -8,7 +8,6 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
     <title>News Portal Admin</title>
-    @vite(['resources/css/app.css','resources/js/app.js'])
     <!-- General CSS Files -->
     <link rel="stylesheet" href="/assets/css/app.min.css">
     <!-- Template CSS -->
@@ -17,6 +16,14 @@
     <!-- Custom style CSS -->
     <link rel="stylesheet" href="/assets/css/custom.css">
     <link rel='shortcut icon' type='image/x-icon' href='/assets/img/favicon.ico' />
+
+    {{-- Data TAble Start --}}
+
+    <link rel="stylesheet" href="assets/bundles/datatables/datatables.min.css">
+    <link rel="stylesheet" href="assets/bundles/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css">
+    {{-- Data TAble End --}}
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+
 </head>
 
 <body>
@@ -44,7 +51,7 @@
                                 src="/assets/img/user.png" class="user-img-radious-style"> <span
                                 class="d-sm-none d-lg-inline-block"></span></a>
                         <div class="dropdown-menu dropdown-menu-right pullDown">
-                            <div class="dropdown-title">Hello {{Auth::user()->name}}</div>
+                            <div class="dropdown-title">Hello {{ Auth::user()->name }}</div>
                             <a href="{{ route('profile.edit') }}" class="dropdown-item has-icon"> <i
                                     class="far
 										fa-user"></i> Profile
@@ -56,19 +63,19 @@
                             </a> --}}
                             <form action="{{ route('logout') }}" method="post">
                                 @csrf
-                                <button class="dropdown-item has-icon text-danger"><i
-                                    class="fas fa-sign-out-alt"></i> Logout</button>
+                                <button class="dropdown-item has-icon text-danger"><i class="fas fa-sign-out-alt"></i>
+                                    Logout</button>
                             </form>
                         </div>
                     </li>
                 </ul>
             </nav>
             <div class="main-sidebar sidebar-style-2">
-                    <x-admin-side-bar/>
+                <x-admin-side-bar />
             </div>
             <!-- Main Content -->
             <div class="main-content">
-                    {{ $slot }}
+                {{ $slot }}
                 <div class="settingSidebar">
                     <a href="javascript:void(0)" class="settingPanelToggle"> <i class="fa fa-spin fa-cog"></i>
                     </a>
@@ -183,6 +190,13 @@
     <script src="/assets/js/scripts.js"></script>
     <!-- Custom JS File -->
     <script src="/assets/js/custom.js"></script>
+
+    {{-- Data  Table Start --}}
+
+    <script src="assets/bundles/datatables/datatables.min.js"></script>
+    <script src="assets/bundles/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js"></script>
+    <script src="assets/js/page/datatables.js"></script>
+    {{-- Data Table End --}}
 </body>
 
 
