@@ -14,7 +14,7 @@
              <a href="{{ route('admin.company.index') }}" class="nav-link"><i data-feather="airplay"></i><span>Company</span></a>
          </li>
          <li class="dropdown">
-             <a href="index.html" class="nav-link"><i data-feather="list"></i><span>Category</span></a>
+             <a href="{{ route('admin.category.index') }}" class="nav-link"><i data-feather="list"></i><span>Category</span></a>
          </li>
          <li class="dropdown">
              <a href="index.html" class="nav-link"><i data-feather="book"></i><span>Article</span></a>

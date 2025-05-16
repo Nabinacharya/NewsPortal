@@ -16,13 +16,13 @@
     <!-- Custom style CSS -->
     <link rel="stylesheet" href="/assets/css/custom.css">
     <link rel='shortcut icon' type='image/x-icon' href='/assets/img/favicon.ico' />
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     {{-- Data TAble Start --}}
 
-    <link rel="stylesheet" href="assets/bundles/datatables/datatables.min.css">
-    <link rel="stylesheet" href="assets/bundles/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="/assets/bundles/datatables/datatables.min.css">
+    <link rel="stylesheet" href="/assets/bundles/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css">
     {{-- Data TAble End --}}
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
 
 </head>
 
@@ -193,9 +193,9 @@
 
     {{-- Data  Table Start --}}
 
-    <script src="assets/bundles/datatables/datatables.min.js"></script>
-    <script src="assets/bundles/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js"></script>
-    <script src="assets/js/page/datatables.js"></script>
+    <script src="/assets/bundles/datatables/datatables.min.js"></script>
+    <script src="/assets/bundles/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js"></script>
+    <script src="/assets/js/page/datatables.js"></script>
     {{-- Data Table End --}}
 </body>
 
